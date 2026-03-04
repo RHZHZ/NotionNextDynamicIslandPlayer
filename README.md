@@ -1,4 +1,5 @@
 # 🎵 灵动岛播放器一键安装包
+<img width="366" height="96" alt="局部截取_20260305_002658" src="https://github.com/user-attachments/assets/6a459081-0f20-4ef7-8fcc-4de2f4ead119" />
 
 专为 NotionNext 项目设计的 macOS 风格灵动岛音乐播放器
 
