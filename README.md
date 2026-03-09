@@ -51,9 +51,11 @@ bash ./DynamicIslandPlayer/install.sh
 
 在 `components/ExternalPlugins.js` 中保持和主项目一致的挂载方式：
 
-- 引入 `MusicPlayer`
-- 引入 `DynamicIslandPlayer`
+- 动态引入 `MusicPlayer`
+- 动态引入 `DynamicIslandPlayer`
 - 在 `MUSIC_PLAYER` 开启时同时渲染它们
+
+如果你就是基于当前主项目仓库使用这套安装包，那么这一步通常已经就位：`components/ExternalPlugins.js` 已包含这两个动态导入，并且已在 `MUSIC_PLAYER` 条件下同时挂载；安装脚本不会改动该文件。
 
 ### 配置项
 
@@ -134,7 +136,9 @@ https://你的-meting-服务地址?id=123456&br=jyeffect&format=json
 
 - 最小接入不要求 `npm install aplayer`
 - `Player.js` 已去掉对 `@/lib/config`、`@/lib/utils` 的硬依赖
+- `DynamicIslandPlayer.js` 只依赖浏览器侧的 `window.__APPLAYER__`，不要求额外主项目私有上下文
 - `InlineIslandAudio.js` 不是最小接入必需文件
+- 最小接入链路只包含 `Player.js`、`DynamicIslandPlayer.js`、`pages/api/meting.js`
 - 文章音频增强失败时，应允许回退到普通音频块/普通卡片
 
 ## 验证方式

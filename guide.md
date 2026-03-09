@@ -14,9 +14,11 @@
 
 在 `components/ExternalPlugins.js` 中，保持和主项目一致的挂载方式：
 
-- 按需引入 `MusicPlayer`
-- 按需引入 `DynamicIslandPlayer`
+- 动态引入 `MusicPlayer`
+- 动态引入 `DynamicIslandPlayer`
 - 在 `MUSIC_PLAYER` 开启时同时渲染这两个组件
+
+如果你就是当前主项目仓库用户，这一步通常已经存在；最小安装脚本不会自动改写 `components/ExternalPlugins.js`。
 
 ### 需要配置的项目项
 
@@ -62,7 +64,11 @@
 
 ### 额外文件
 
+增强模式才需要继续复制：
+
 - `DynamicIslandPlayer/components/InlineIslandAudio.js`
+
+最小接入路径不依赖 `InlineIslandAudio.js`、`pages/api/audio-meta.js`、`lib/server/audioMeta.js`。
 
 ### 真实接入点
 
